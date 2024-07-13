@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import Product from "../models/product.model";
+import Producto from "../models/producto.model";
 
 
 //obtener productos
 
 export const getProduct = async (req: Request, res: Response) => {
     try {
-        const products = await Product.findAll({
+        const products = await Producto.findAll({
             order: [
                 ['price', 'DESC']
             ]
@@ -21,7 +21,7 @@ export const getProduct = async (req: Request, res: Response) => {
 export const getProductById = async (req: Request, res: Response) => {
     try {
         const { id } = req.params
-        const product = await Product.findByPk(id)
+        const product = await Producto.findByPk(id)
 
         if(!product) {
             return res.status(404).json({
@@ -38,7 +38,7 @@ export const getProductById = async (req: Request, res: Response) => {
 //Modificar productos
 export const updateProduct = async (req: Request, res: Response) => {
     const { id } = req.params
-    const product = await Product.findByPk(id)
+    const product = await Producto.findByPk(id)
 
     if(!product) {
         return res.status(404).json({
@@ -57,7 +57,7 @@ export const updateProduct = async (req: Request, res: Response) => {
 //Crear productos
 export const createProduct = async (req : Request, res : Response) => {
     try {
-        const product = await Product.create(req.body)
+        const product = await Producto.create(req.body)
         res.status(201).json({data: product})
     } catch (error) {
         console.log(error)
@@ -67,7 +67,7 @@ export const createProduct = async (req : Request, res : Response) => {
 //modificar con patch
 export const updateAvailability = async (req: Request, res: Response) => {
     const { id } = req.params
-    const product = await Product.findByPk(id)
+    const product = await Producto.findByPk(id)
 
     if(!product) {
         return res.status(404).json({
@@ -84,7 +84,7 @@ export const updateAvailability = async (req: Request, res: Response) => {
 //Borrar porductos
 export const deleteProduct = async (req: Request, res: Response) => {
     const { id } = req.params
-    const product = await Product.findByPk(id)
+    const product = await Producto.findByPk(id)
 
     if(!product) {
         return res.status(404).json({

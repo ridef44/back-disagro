@@ -1,10 +1,10 @@
 import { Table, Column, Model, DataType, Default } from 'sequelize-typescript'
 
 @Table({
-    tableName: 'products'
+    tableName: 'productos'
 })
 
-class Product extends Model {
+class Producto extends Model {
     @Column({
         type: DataType.STRING(100)  
     })
@@ -22,4 +22,4 @@ class Product extends Model {
     declare availability: boolean
 }
 
-export default Product
+export default Producto

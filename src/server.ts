@@ -1,7 +1,13 @@
 import express from 'express'
-import router from './router'
+import producRoutes from './routes/Productroutes'
 import db from './config/db'
 import colors from 'colors'
+import cors from 'cors'
+import usuarioRoutes from './routes/userRoutes';
+import asistenciaRoutes from './routes/asistenciaRoute';
+import seleccionProductos from './routes/seleccionProductoRoutes'
+
+
 
 async function conectDB () {
     try {
@@ -24,8 +30,22 @@ const server = express()
 //Datos para lectura de formuñariops
 server.use(express.json())
 
-//rutas de api
-server.use('/api/products', router)
+server.use(cors({
+    origin: process.env.CLIENT_ORIGIN || 'http://localhost:3000'
+  }));
+  
+
+//Ruta de productos
+server.use('/api/products', producRoutes) 
+//Ruta de usuarios
+server.use('/api/usuarios', usuarioRoutes);
+//Ruta de asistencia
+server.use('/api/asistencias', asistenciaRoutes);
+
+//SelecciónProductos
+server.use('/api/seleccionProducto', seleccionProductos);
+
+
 
 export default server
 
