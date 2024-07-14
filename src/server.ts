@@ -1,4 +1,5 @@
 import express from 'express'
+import productRoutes from './routes/productRoutes'
 import db from './config/db'
 import colors from 'colors'
 import cors from 'cors'
@@ -35,7 +36,7 @@ server.use(cors({
   
 
 //Ruta de productos
-server.use('/api/products', producRoutes) 
+server.use('/api/products', productRoutes) 
 //Ruta de usuarios
 server.use('/api/usuarios', usuarioRoutes);
 //Ruta de asistencia
