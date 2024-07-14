@@ -1,5 +1,4 @@
 import express from 'express'
-import producRoutes from './routes/Productroutes'
 import db from './config/db'
 import colors from 'colors'
 import cors from 'cors'
