@@ -5,6 +5,7 @@ export const handleInputErrors = (req: Request, res: Response, next: NextFunctio
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
         console.log("Error desde middleware");
+        console.log(errors)
         return res.status(400).json({ errors: errors.array() });
     }
     next();
