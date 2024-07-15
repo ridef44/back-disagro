@@ -1,5 +1,9 @@
 import { Sequelize } from 'sequelize-typescript';
 import dotenv from 'dotenv';
+import Producto from '../models/producto.model';
+import Asistencia from '../models/asistencia.model';
+import SeleccionProductos from '../models/seleccionProductos.model';
+import Usuario from '../models/user.model';
 
 dotenv.config({ path: '.env' });
 
@@ -10,7 +14,7 @@ const db = new Sequelize({
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
   dialect: 'postgres',
-  models: [__dirname + '/../models/**/*.ts'],
+  models: [Producto, Asistencia, SeleccionProductos, Usuario], 
   logging: false,
   dialectOptions: {
     ssl: {
