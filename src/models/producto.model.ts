@@ -2,6 +2,7 @@ import { Table, Column, Model, DataType, ForeignKey, BelongsTo, BelongsToMany } 
 import Asistencia from './asistencia.model';
 import SeleccionProductos from './seleccionProductos.model';
 
+
 @Table({
   tableName: 'productos'
 })
