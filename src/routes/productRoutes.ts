@@ -5,7 +5,7 @@ import { handleInputErrors } from '../middlewares'
 
 const router = Router()
 
-//obtener todos los productos
+
 router.get('/', getProduct)
 
 //obtener producto por id
@@ -17,7 +17,7 @@ router.get('/:id',
 
 
 
-//Metodo para crear productos
+
 router.post('/', 
    
     body('name')
@@ -30,7 +30,7 @@ router.post('/',
     createProduct
 )
 
-//Metodo para actualizar productos
+
 router.put('/:id', 
     param('id').isInt().withMessage('ID no válido'),
     body('name')

@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import Asistencia from '../models/asistencia.model';
 
 
-// Crear una nueva asistencia
+
 export const createAsistencia = async (req: Request, res: Response) => {
   const { usuarioId, fechaHora, montoFinal  } = req.body;
 

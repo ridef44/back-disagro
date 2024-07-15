@@ -6,7 +6,7 @@ import { handleInputErrors } from '../middlewares'
 
 const router = Router();
 
-// Obtener todos los usuarios
+
 router.get('/', getUsers);
 
 // Obtener usuario por ID
@@ -16,7 +16,7 @@ router.get('/:id',
   getUserById
 );
 
-// Crear un nuevo usuario
+
 router.post('/', 
   body('nombre')
     .notEmpty().withMessage('El campo nombre está vacío'),

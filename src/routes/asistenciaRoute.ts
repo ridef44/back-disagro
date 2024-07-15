@@ -6,7 +6,7 @@ import { handleInputErrors } from '../middlewares';
 const router = Router();
 
 
-// Crear una nueva asistencia
+
 router.post('/', 
     body('usuarioId')
       .isInt().withMessage('ID de usuario no válido')
