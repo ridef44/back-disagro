@@ -1,6 +1,7 @@
 import server from "./server";
 import colors from "colors"
 import 'reflect-metadata';
+import './sequelize';
 
 
 server.set('port', 4000);
