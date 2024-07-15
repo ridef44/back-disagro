@@ -6,6 +6,8 @@ import cors from 'cors'
 import usuarioRoutes from './routes/userRoutes';
 import asistenciaRoutes from './routes/asistenciaRoute';
 import seleccionProductos from './routes/seleccionProductoRoutes'
+import 'reflect-metadata';
+
 
 
 

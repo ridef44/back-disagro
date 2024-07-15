@@ -1,5 +1,7 @@
 import server from "./server";
 import colors from "colors"
+import 'reflect-metadata';
+
 
 server.set('port', 4000);
 
