@@ -3,7 +3,7 @@ import Asistencia from './asistencia.model';
 import Producto from './producto.model';
 
 @Table({
-  tableName: 'seleccionProductos'
+  tableName: 'seleccionproductos'
 })
 class SeleccionProductos extends Model {
   @Column({
