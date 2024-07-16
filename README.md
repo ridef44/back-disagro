@@ -1,2 +1,2 @@
 Diagrama de aplicaicon
-![Screenshot 2024-07-15 at 1 54 17 AM](https://github.com/user-attachments/assets/830017b3-8fe6-4ea5-9bb7-e95e0653fdf2)
+<img width="1252" alt="Screenshot 2024-07-16 at 8 54 07 AM" src="https://github.com/user-attachments/assets/8bd71e7c-a99b-4f07-b240-0bc17308f893">
